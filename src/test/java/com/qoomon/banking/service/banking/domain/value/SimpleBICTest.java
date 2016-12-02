@@ -12,7 +12,7 @@ public class SimpleBICTest {
         String bic = "XXXX" + "DE" + "12" + "789";
 
         // WHEN
-        boolean isValid = SimpleBIC.validate(bic);
+        boolean isValid = SimpleBIC.isValid(bic);
 
         // THEN
         assertThat(isValid).isTrue();
@@ -24,7 +24,7 @@ public class SimpleBICTest {
         String bic = "XXXX" + "DEE" + "12" + "789";
 
         // WHEN
-        boolean isValid = SimpleBIC.validate(bic);
+        boolean isValid = SimpleBIC.isValid(bic);
 
         // THEN
         assertThat(isValid).isFalse();

@@ -28,7 +28,6 @@ import com.qoomon.banking.service.banking.domain.value.SimpleIBAN;
  * Account 1: <b>DE21123456</b> <br>
  * Account 2: <b>DE281234567</b>
  * 
- * @param args
  */
 public class App {
 

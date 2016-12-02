@@ -30,11 +30,7 @@ public class SimpleBIC extends StringDV {
      * @param value
      *            primitive value
      *            <br>
-     *            &emsp;<b>require</b> {@link #validate(String)} == true
-     * @param value2
-     *            primitive value
-     *            <br>
-     *            &emsp;<b>require</b> {@link #validate(String)} == true
+     *            &emsp;<b>require</b> {@link #isValid(String)} == true
      * @return {@link #SimpleBIC} instance
      */
     public static SimpleBIC of(String value) {
@@ -48,7 +44,7 @@ public class SimpleBIC extends StringDV {
      *            primitive value
      * @return true if valid false else
      */
-    public static boolean validate(String value) {
+    public static boolean isValid(String value) {
         boolean isValid = StringDV.isValid(value);
         if (isValid) {
             isValid = BANK_IDENTIFIER_CODE_PATTERN.matcher(value).matches();

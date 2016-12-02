@@ -12,7 +12,7 @@ public class SimpleIBANTest {
         String number = "DE" + "21" + "123456";
 
         // WHEN
-        boolean isValid = SimpleIBAN.validate(number);
+        boolean isValid = SimpleIBAN.isValid(number);
 
         // THEN
         assertThat(isValid).isTrue();
@@ -24,7 +24,7 @@ public class SimpleIBANTest {
         String number = "DE" + "123456" + "9";
 
         // WHEN
-        boolean isValid = SimpleIBAN.validate(number);
+        boolean isValid = SimpleIBAN.isValid(number);
 
         // THEN
         assertThat(isValid).isFalse();
@@ -36,7 +36,7 @@ public class SimpleIBANTest {
         String number = "DE" + "12345" + "5";
 
         // WHEN
-        boolean isValid = SimpleIBAN.validate(number);
+        boolean isValid = SimpleIBAN.isValid(number);
 
         // THEN
         assertThat(isValid).isFalse();
@@ -48,7 +48,7 @@ public class SimpleIBANTest {
         String number = "DEX" + "123456" + "1";
 
         // WHEN
-        boolean isValid = SimpleIBAN.validate(number);
+        boolean isValid = SimpleIBAN.isValid(number);
 
         // THEN
         assertThat(isValid).isFalse();

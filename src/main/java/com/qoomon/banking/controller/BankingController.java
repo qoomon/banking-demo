@@ -24,7 +24,7 @@ public class BankingController {
 
         String accountText = args.get("account");
         SimpleIBAN accountIban = null;
-        if (SimpleIBAN.validate(accountText)) {
+        if (SimpleIBAN.isValid(accountText)) {
             accountIban = SimpleIBAN.of(accountText);
         } else {
             argsAreValid = false;
@@ -45,7 +45,7 @@ public class BankingController {
 
         String destinationText = args.get("account");
         SimpleIBAN destinationIban = null;
-        if (SimpleIBAN.validate(destinationText)) {
+        if (SimpleIBAN.isValid(destinationText)) {
             destinationIban = SimpleIBAN.of(destinationText);
         } else {
             argsAreValid = false;
@@ -74,7 +74,7 @@ public class BankingController {
 
         String sourceText = args.get("account");
         SimpleIBAN sourceIban = null;
-        if (SimpleIBAN.validate(sourceText)) {
+        if (SimpleIBAN.isValid(sourceText)) {
             sourceIban = SimpleIBAN.of(sourceText);
         } else {
             argsAreValid = false;
@@ -103,7 +103,7 @@ public class BankingController {
 
         String sourceText = args.get("account");
         SimpleIBAN sourceIban = null;
-        if (SimpleIBAN.validate(sourceText)) {
+        if (SimpleIBAN.isValid(sourceText)) {
             sourceIban = SimpleIBAN.of(sourceText);
         } else {
             argsAreValid = false;
@@ -112,7 +112,7 @@ public class BankingController {
 
         String destinationText = args.get("destination");
         SimpleIBAN destinationIban = null;
-        if (SimpleIBAN.validate(destinationText)) {
+        if (SimpleIBAN.isValid(destinationText)) {
             destinationIban = SimpleIBAN.of(destinationText);
         } else {
             argsAreValid = false;

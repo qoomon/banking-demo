@@ -26,13 +26,13 @@ public class SimpleIBAN extends StringDV {
     }
 
     /**
-     * Creates {@link #BankAccountNumber} instance of given primitive value
+     * Creates {@link #SimpleIBAN} instance of given primitive value
      * 
      * @param value
      *            primitive value
      *            <br>
-     *            &emsp;<b>require</b> {@link #validate(String)} == true
-     * @return {@link #BankAccountNumber} instance
+     *            &emsp;<b>require</b> {@link #isValid(String)} == true
+     * @return {@link #SimpleIBAN} instance
      */
     public static SimpleIBAN of(String value) {
         return new SimpleIBAN(value);
