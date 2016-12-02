@@ -45,7 +45,7 @@ public class SimpleIBAN extends StringDV {
      *            primitive value
      * @return true if valid false else
      */
-    public static boolean validate(String value) {
+    public static boolean isValid(String value) {
         boolean isValid = StringDV.isValid(value);
         if (isValid) {
             Matcher matcher = ACCOUNT_NUMBER_PATTERN.matcher(value);
