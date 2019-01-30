@@ -30,7 +30,7 @@
         <dependency>
             <groupId>com.qoomon</groupId>
             <artifactId>domainvalue</artifactId>
-            <version>3.0.1</version>
+            <version>5.0.0</version>
         </dependency>
 
         <dependency>
