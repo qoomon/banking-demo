@@ -61,7 +61,7 @@ public class SimpleIBAN extends StringDV {
 
     private static boolean validateChecksum(Integer number, Integer checkSum) {
         int digitSum = MathUtil.digitSum(number);
-        return checkSum.equals(digitSum % 100);
+        return checkSum == digitSum % 100;
     }
 
 }

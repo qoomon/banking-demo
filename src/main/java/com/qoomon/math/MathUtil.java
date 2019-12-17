@@ -12,8 +12,8 @@ public final class MathUtil {
      *            positive and negative numbers allowed
      * @return digit sum. always positive
      */
-    public static int digitSum(final long number) {
-        long remainingNumber = Math.abs(number);
+    public static int digitSum(final int number) {
+        int remainingNumber = Math.abs(number);
         int checksum = 0;
         while (remainingNumber != 0) {
             // add last digit to the sum

@@ -9,7 +9,7 @@ public class MathUtilTest {
     @Test
     public void digitSum_ofPositiveNumber() throws Exception {
         // GIVEN
-        long number = 31337;
+        int number = 31337;
 
         // WHEN
         int digitSum = MathUtil.digitSum(number);
@@ -21,7 +21,7 @@ public class MathUtilTest {
     @Test
     public void digitSum_ofNegativeNumber() throws Exception {
         // GIVEN
-        long number = -31337;
+        int number = -31337;
 
         // WHEN
         int digitSum = MathUtil.digitSum(number);
