@@ -1,12 +1,5 @@
 package com.qoomon.banking;
 
-import static org.joda.money.CurrencyUnit.EUR;
-
-import java.io.InputStream;
-import java.io.PrintStream;
-import java.util.HashMap;
-import java.util.Scanner;
-
 import com.qoomon.banking.controller.BankingController;
 import com.qoomon.banking.repository.BankAccountRepository;
 import com.qoomon.banking.service.banking.BankingService;
@@ -15,9 +8,16 @@ import com.qoomon.banking.service.banking.domain.object.BankAccount;
 import com.qoomon.banking.service.banking.domain.value.SimpleBIC;
 import com.qoomon.banking.service.banking.domain.value.SimpleIBAN;
 
+import java.io.InputStream;
+import java.io.PrintStream;
+import java.util.HashMap;
+import java.util.Scanner;
+
+import static org.joda.money.CurrencyUnit.EUR;
+
 /**
  * Bank Demo Application
- * 
+ *
  * <ul>
  * <li><b>deposit</b> account:<b>IBAN</b> amount:<b>AMOUNT_CURRENCY</b></li>
  * <li><b>withdraw</b> account:<b>IBAN</b> amount:<b>AMOUNT_CURRENCY</b></li>
@@ -27,7 +27,6 @@ import com.qoomon.banking.service.banking.domain.value.SimpleIBAN;
  * </ul>
  * Account 1: <b>DE21123456</b> <br>
  * Account 2: <b>DE281234567</b>
- * 
  */
 public class App {
 
@@ -51,9 +50,9 @@ public class App {
 
     }
 
-    private BankingController bankingController;
-    private PrintStream consoleOutpuStream;
-    private InputStream consoleInputStream;
+    private final BankingController bankingController;
+    private final PrintStream consoleOutpuStream;
+    private final InputStream consoleInputStream;
 
     public App(BankingController bankingController, InputStream consoleInputStream, PrintStream consoleOutpuStream) {
         this.bankingController = bankingController;

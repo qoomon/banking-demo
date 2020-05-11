@@ -1,8 +1,8 @@
 package com.qoomon.banking.service.banking.domain.value;
 
-import java.util.regex.Pattern;
-
 import com.qoomon.domainvalue.type.StringDV;
+
+import java.util.regex.Pattern;
 
 /**
  * represent a simple BIC
@@ -13,7 +13,7 @@ import com.qoomon.domainvalue.type.StringDV;
  * <li>group 3: 2-digit location code</li>
  * <li>group 4: 3-digit branch code</li>
  * </ul>
- * 
+ *
  * @author qoomon
  */
 public class SimpleBIC extends StringDV {
@@ -26,11 +26,10 @@ public class SimpleBIC extends StringDV {
 
     /**
      * Creates {@link #SimpleBIC} instance of given primitive value
-     * 
-     * @param value
-     *            primitive value
-     *            <br>
-     *            &emsp;<b>require</b> {@link #isValid(String)} == true
+     *
+     * @param value primitive value
+     *              <br>
+     *              &emsp;<b>require</b> {@link #isValid(String)} == true
      * @return {@link #SimpleBIC} instance
      */
     public static SimpleBIC of(String value) {
@@ -39,9 +38,8 @@ public class SimpleBIC extends StringDV {
 
     /**
      * Checks if {@code value} is valid {@link #SimpleBIC}
-     * 
-     * @param value
-     *            primitive value
+     *
+     * @param value primitive value
      * @return true if valid false else
      */
     public static boolean isValid(String value) {

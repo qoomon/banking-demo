@@ -7,9 +7,8 @@ public final class MathUtil {
 
     /**
      * calculate the digit sum of a given number
-     * 
-     * @param number
-     *            positive and negative numbers allowed
+     *
+     * @param number positive and negative numbers allowed
      * @return digit sum. always positive
      */
     public static int digitSum(final int number) {

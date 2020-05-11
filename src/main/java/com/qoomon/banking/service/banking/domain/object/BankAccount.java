@@ -1,18 +1,16 @@
 package com.qoomon.banking.service.banking.domain.object;
 
-import static com.google.common.base.Preconditions.checkNotNull;
-
+import com.google.common.base.Preconditions;
+import com.qoomon.banking.service.banking.domain.value.SimpleIBAN;
 import org.joda.money.BigMoney;
 import org.joda.money.CurrencyUnit;
 
-import com.google.common.base.Preconditions;
-import com.qoomon.banking.service.banking.domain.value.SimpleIBAN;
+import static com.google.common.base.Preconditions.checkNotNull;
 
 /**
  * represent a bank account
- * 
- * @author qoomon
  *
+ * @author qoomon
  */
 public class BankAccount {
 
@@ -47,12 +45,11 @@ public class BankAccount {
 
     /**
      * Deposit given amount
-     * 
-     * @param amountToDeposit
-     *            <br>
-     *            &emsp;<b>require</b> not null
-     *            <br>
-     *            &emsp;<b>require</b> to match {@link #getCurrency()}
+     *
+     * @param amountToDeposit <br>
+     *                        &emsp;<b>require</b> not null
+     *                        <br>
+     *                        &emsp;<b>require</b> to match {@link #getCurrency()}
      */
     public void deposit(BigMoney amountToDeposit) {
         Preconditions.checkNotNull(amountToDeposit);
@@ -61,12 +58,11 @@ public class BankAccount {
 
     /**
      * Withdraw given amount
-     * 
-     * @param amountToWithdraw
-     *            <br>
-     *            &emsp;<b>require</b> not null
-     *            <br>
-     *            &emsp;<b>require</b> to match {@link #getCurrency()}
+     *
+     * @param amountToWithdraw <br>
+     *                         &emsp;<b>require</b> not null
+     *                         <br>
+     *                         &emsp;<b>require</b> to match {@link #getCurrency()}
      */
     public void withdraw(BigMoney amountToWithdraw) {
         Preconditions.checkNotNull(amountToWithdraw);

@@ -1,10 +1,10 @@
 package com.qoomon.banking.service.banking.domain.value;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 import com.qoomon.domainvalue.type.StringDV;
 import com.qoomon.math.MathUtil;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * represent a simple IBAN with own checksum implementation
@@ -14,7 +14,7 @@ import com.qoomon.math.MathUtil;
  * <li>group 2: 2-digit check digits (digit sum modular 100)</li>
  * <li>group 3: up to 30 digits Basic Bank Account Number (BBAN)</li>
  * </ul>
- * 
+ *
  * @author qoomon
  */
 public class SimpleIBAN extends StringDV {
@@ -27,11 +27,10 @@ public class SimpleIBAN extends StringDV {
 
     /**
      * Creates {@link #SimpleIBAN} instance of given primitive value
-     * 
-     * @param value
-     *            primitive value
-     *            <br>
-     *            &emsp;<b>require</b> {@link #isValid(String)} == true
+     *
+     * @param value primitive value
+     *              <br>
+     *              &emsp;<b>require</b> {@link #isValid(String)} == true
      * @return {@link #SimpleIBAN} instance
      */
     public static SimpleIBAN of(String value) {
@@ -40,9 +39,8 @@ public class SimpleIBAN extends StringDV {
 
     /**
      * Checks if {@code value} is valid {@link SimpleIBAN}
-     * 
-     * @param value
-     *            primitive value
+     *
+     * @param value primitive value
      * @return true if valid false else
      */
     public static boolean isValid(String value) {

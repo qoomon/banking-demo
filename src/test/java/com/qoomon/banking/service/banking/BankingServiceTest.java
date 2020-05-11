@@ -1,20 +1,19 @@
 package com.qoomon.banking.service.banking;
 
-import static org.assertj.core.api.StrictAssertions.assertThat;
-import static org.assertj.core.api.StrictAssertions.catchThrowable;
-import static org.joda.money.CurrencyUnit.EUR;
-import static org.joda.money.CurrencyUnit.USD;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
-
-import org.joda.money.BigMoney;
-import org.joda.money.CurrencyMismatchException;
-import org.junit.Test;
-
 import com.qoomon.banking.repository.BankAccountRepository;
 import com.qoomon.banking.service.banking.domain.object.Bank;
 import com.qoomon.banking.service.banking.domain.object.BankAccount;
 import com.qoomon.banking.service.banking.domain.value.SimpleIBAN;
+import org.joda.money.BigMoney;
+import org.joda.money.CurrencyMismatchException;
+import org.junit.Test;
+
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.catchThrowable;
+import static org.joda.money.CurrencyUnit.EUR;
+import static org.joda.money.CurrencyUnit.USD;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 public class BankingServiceTest {
 
@@ -39,7 +38,7 @@ public class BankingServiceTest {
         // THEN
         assertThat(destinationBankAcount.getBalance()).isEqualTo(startBalance.plus(ammountToDeposit));
     }
-    
+
     @Test
     public void deposit_negetiveAmount() throws Exception {
         // GIVEN
@@ -219,7 +218,7 @@ public class BankingServiceTest {
 
         // THEN
         assertThat(accountByIban).isEqualToComparingFieldByField(sourceBankAcount);
-    
+
     }
 
 }

@@ -1,12 +1,11 @@
 package com.qoomon.banking.service.banking;
 
-import org.joda.money.BigMoney;
-
 import com.google.common.base.Preconditions;
 import com.qoomon.banking.repository.BankAccountRepository;
 import com.qoomon.banking.service.banking.domain.object.BankAccount;
 import com.qoomon.banking.service.banking.domain.value.SimpleIBAN;
 import com.qoomon.banking.service.banking.exception.UnkownAccountException;
+import org.joda.money.BigMoney;
 
 public class BankingService {
     private final BankAccountRepository bankAccountRepository;
@@ -17,17 +16,14 @@ public class BankingService {
     }
 
     /**
-     * 
-     * @param destinationIban
-     *            <br>
-     *            &emsp;<b>require</b> not null
-     * @param amountToDeposit
-     *            <br>
-     *            &emsp;<b>require</b> not null
-     *            <br>
-     *            &emsp;<b>require</b> {@link BigMoney#isPositive()}
-     *            <br>
-     *            &emsp;<b>require</b> currency to match {@link BankAccount#getCurrency()}
+     * @param destinationIban <br>
+     *                        &emsp;<b>require</b> not null
+     * @param amountToDeposit <br>
+     *                        &emsp;<b>require</b> not null
+     *                        <br>
+     *                        &emsp;<b>require</b> {@link BigMoney#isPositive()}
+     *                        <br>
+     *                        &emsp;<b>require</b> currency to match {@link BankAccount#getCurrency()}
      */
     public void deposit(SimpleIBAN destinationIban, BigMoney amountToDeposit) {
         Preconditions.checkNotNull(destinationIban);
@@ -43,17 +39,14 @@ public class BankingService {
     }
 
     /**
-     * 
-     * @param sourceIban
-     *            <br>
-     *            &emsp;<b>require</b> not null
-     * @param amountToWithdraw
-     *            <br>
-     *            &emsp;<b>require</b> not null
-     *            <br>
-     *            &emsp;<b>require</b> {@link BigMoney#isPositive()}
-     *            <br>
-     *            &emsp;<b>require</b> currency to match {@link BankAccount#getCurrency()}
+     * @param sourceIban       <br>
+     *                         &emsp;<b>require</b> not null
+     * @param amountToWithdraw <br>
+     *                         &emsp;<b>require</b> not null
+     *                         <br>
+     *                         &emsp;<b>require</b> {@link BigMoney#isPositive()}
+     *                         <br>
+     *                         &emsp;<b>require</b> currency to match {@link BankAccount#getCurrency()}
      */
     public void withdraw(SimpleIBAN sourceIban, BigMoney amountToWithdraw) {
         Preconditions.checkNotNull(sourceIban);
@@ -70,22 +63,18 @@ public class BankingService {
     }
 
     /**
-     * 
-     * @param sourceIban
-     *            <br>
-     *            &emsp;<b>require</b> not null
-     * @param destinationIban
-     *            <br>
-     *            &emsp;<b>require</b> not null
-     *            <br>
-     *            &emsp;<b>require</b> currency to match {@link BankAccount#getCurrency()}
-     * @param amountToTransfere
-     *            <br>
-     *            &emsp;<b>require</b> not null
-     *            <br>
-     *            &emsp;<b>require</b> {@link BigMoney#isPositive()}
-     *            <br>
-     *            &emsp;<b>require</b> currency to match {@link BankAccount#getCurrency()}
+     * @param sourceIban        <br>
+     *                          &emsp;<b>require</b> not null
+     * @param destinationIban   <br>
+     *                          &emsp;<b>require</b> not null
+     *                          <br>
+     *                          &emsp;<b>require</b> currency to match {@link BankAccount#getCurrency()}
+     * @param amountToTransfere <br>
+     *                          &emsp;<b>require</b> not null
+     *                          <br>
+     *                          &emsp;<b>require</b> {@link BigMoney#isPositive()}
+     *                          <br>
+     *                          &emsp;<b>require</b> currency to match {@link BankAccount#getCurrency()}
      */
     public void transfer(SimpleIBAN sourceIban, SimpleIBAN destinationIban, BigMoney amountToTransfere) {
         Preconditions.checkNotNull(sourceIban);
@@ -107,10 +96,8 @@ public class BankingService {
     }
 
     /**
-     * 
-     * @param accountIban
-     *            <br>
-     *            &emsp;<b>require</b> not null
+     * @param accountIban <br>
+     *                    &emsp;<b>require</b> not null
      * @return bank account or null
      */
     public BankAccount getAccountByIban(SimpleIBAN accountIban) {

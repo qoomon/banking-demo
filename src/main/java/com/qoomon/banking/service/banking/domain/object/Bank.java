@@ -1,16 +1,15 @@
 package com.qoomon.banking.service.banking.domain.object;
 
-import static com.google.common.base.Preconditions.checkArgument;
-import static com.google.common.base.Preconditions.checkNotNull;
-
 import com.google.common.base.Strings;
 import com.qoomon.banking.service.banking.domain.value.SimpleBIC;
 
+import static com.google.common.base.Preconditions.checkArgument;
+import static com.google.common.base.Preconditions.checkNotNull;
+
 /**
  * represent a Bank Object
- * 
- * @author qoomon
  *
+ * @author qoomon
  */
 public class Bank {
 
@@ -19,7 +18,6 @@ public class Bank {
     private final String name;
 
     /**
-     * 
      * @param bic
      * @param name
      * @require {@link #bic} not null

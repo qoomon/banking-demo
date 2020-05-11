@@ -1,8 +1,8 @@
 package com.qoomon.banking.service.banking.domain.value;
 
-import static org.assertj.core.api.StrictAssertions.assertThat;
-
 import org.junit.Test;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class SimpleIBANTest {
 

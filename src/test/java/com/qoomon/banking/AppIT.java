@@ -1,15 +1,5 @@
 package com.qoomon.banking;
 
-import static org.assertj.core.api.StrictAssertions.assertThat;
-import static org.joda.money.CurrencyUnit.EUR;
-
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.InputStream;
-import java.io.PrintStream;
-
-import org.junit.Test;
-
 import com.qoomon.banking.controller.BankingController;
 import com.qoomon.banking.repository.BankAccountRepository;
 import com.qoomon.banking.service.banking.BankingService;
@@ -17,6 +7,15 @@ import com.qoomon.banking.service.banking.domain.object.Bank;
 import com.qoomon.banking.service.banking.domain.object.BankAccount;
 import com.qoomon.banking.service.banking.domain.value.SimpleBIC;
 import com.qoomon.banking.service.banking.domain.value.SimpleIBAN;
+import org.junit.Test;
+
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.InputStream;
+import java.io.PrintStream;
+
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.joda.money.CurrencyUnit.EUR;
 
 public class AppIT {
 
