@@ -1,5 +1,6 @@
 package com.qoomon.banking.service.banking.domain.value;
 
+import com.qoomon.domainvalue.annotation.ValidationMethod;
 import com.qoomon.domainvalue.type.StringDV;
 import com.qoomon.math.MathUtil;
 
